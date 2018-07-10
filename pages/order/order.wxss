@@ -1,0 +1,83 @@
+@import "Template/OrderTemplate.wxss";
+@import "../../utils/Template/BackGroundTemplate/BackGroundTemplate.wxss";
+
+.mainView {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.topView {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  top: 0px;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+}
+
+.searchView {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 90%;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.seachImage {
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+.searchInput {
+  margin-left: 10px;
+  width: calc(100% - 25px);
+  height: 100%;
+  line-height: 30px;
+  font-size: 13px;
+}
+
+.searchMenuView {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
+
+.orderMenuView {
+  flex: 1;
+  height: 100%;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.scrollView {
+  position: fixed;
+  top: 100px;
+  width: 100%;
+}
+
+.emptyCartView {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 105px;
+  width: 100%;
+  height: calc(100% - 105px);
+}
+
+.emptyImage {
+  width: 182px;
+  height: 218px;
+  margin-bottom: 56px;
+}

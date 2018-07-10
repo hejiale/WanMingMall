@@ -1,0 +1,284 @@
+@import "Template/ParameterTemplate.wxss";
+@import "../../utils/Template/BackGroundTemplate/BackGroundTemplate.wxss";
+
+.tryGlassView {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+  width: 70px;
+  height: 70px;
+  z-index: 700;
+}
+
+.tryGlassImage {
+  width: 59px;
+  height: 59px;
+}
+
+.contentView {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.swiper_box {
+  margin-top: 5px;
+  width: 100%;
+  background-color: white;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+}
+
+.productInfo {  
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+.productName {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.priceText {
+  margin-top: 10px;
+  margin-left: 17px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.specificationView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.specificationTitleView {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+.specificationDetailText {
+  margin-left: 20px;
+  width: calc(50% - 30px);
+  font-size: 20px;
+  text-align: center;
+}
+
+.columnLine {
+  width: 1px;
+  height: 20px;
+}
+
+.specificationParameterText {
+  width: calc(50% - 30px);
+  font-size: 20px;
+  text-align: center;
+}
+
+.lineImage {
+  width: calc(100% - 20px);
+  height: 1px;
+}
+
+.specifications {
+  width: 100%;
+}
+
+.FrameView {
+  width: 100%;
+}
+
+.specificationItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.keyText {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #999;
+}
+
+.valueText {
+  margin-top: 5px;
+  margin-left: 30px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.webView {
+  width: 100%;
+  background-color: white;
+}
+
+.footView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border-top: 1rpx solid #e6e6e6;
+}
+
+.leftBottomView {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: calc(40% - 30px);
+  height: 100%;
+}
+
+.cartBottomView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+.phoneImage {
+  flex: 1;
+  width: 32px;
+  height: 22px;
+  border-right: 1px solid #dcdcdc;
+}
+
+.cartImage {
+  width: 32px;
+  height: 22px;
+}
+
+.cs_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: #fff;
+  height: 100%;
+}
+
+.cs_button:after {
+  border: 0px;
+}
+
+.cs_image {
+  width: 32px;
+  height: 22px;
+}
+
+.addCartButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  width: 30%;
+  height: 36px;
+  border: 1px solid #3DA8F5;
+  border-radius: 3px;
+}
+
+.cornerMarkView {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  line-height: 18px;
+  margin-left: 10px;
+  margin-top: -10px;
+}
+
+.payOrderButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  width: 30%;
+  height: 36px;
+  background-color: #3DA8F5;
+  border-radius: 3px;
+}
+
+.bookText {
+  font-size: 14px;
+  color: white;
+}
+
+.addCartText {
+  font-size: 14px;
+  color: #3DA8F5;
+  text-align: center;
+}
+
+.noneAblePayView{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  width: calc(60% + 10px);
+  height: 36px;
+  background-color: #3DA8F5;
+  border-radius: 3px;
+  opacity: 0.4;
+}
+
+.noneAblePayText{
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.tryImage {
+  width: 40px;
+  height: 40px;
+}
+
+.HomeMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  background-color: #000;
+  opacity: 0.5;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+}
+
+.HomeMenuImage {
+  width: 29px;
+  height: 24px;
+}

@@ -1,0 +1,45 @@
+<import src="../../utils/Template/BackGroundTemplate/BackGroundTemplate.wxml" />
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:10% ;width:95%;margin-top:10rpx">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="picker-item">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<view class="page">
+  <template is="bgTemplate"></template>
+  <view class='contentView'>
+    <view class="contacterView">
+      <input class="inputText" placeholder='收货人' placeholder-style='font-size: 14px;color: #999999;' bindfocus='onInputFocus' bindinput="bindContacterInput" value="{{contacter}}" />
+    </view>
+    <view class="line"></view>
+    <view class="contacterView">
+      <input class="inputText" placeholder='联系电话' placeholder-style='font-size: 14px;color: #999999;' bindfocus='onInputFocus' bindinput="bindContacterPhoneInput" type="number" value="{{contactPhone}}" maxlength="11" />
+    </view>
+    <view class="line"></view>
+    <view class="contacterView">
+      <input class="inputText" placeholder='省市区' placeholder-style='font-size: 14px;color: #999999;' value="{{areaInfo}}" disabled="true" bindtap='selectDistrict' />
+    </view>
+    <view class="line"></view>
+    <view class="contacterView">
+      <input class="inputText" placeholder='详细地址' placeholder-style='font-size: 14px;color: #999999;' bindfocus='onInputFocus' bindinput="bindContacterAddressInput" value="{{contactAddress}}" />
+    </view>
+    <view class="footView">
+      <text class="sureText" bindtap="onSaveAddress">保存</text>
+    </view>
+  </view>
+</view>

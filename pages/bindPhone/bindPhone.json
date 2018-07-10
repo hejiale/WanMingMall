@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "立即开卡",
+  "usingComponents": {
+    "LoginComponent": "../../Component/Login/LoginComponent"
+  },
+  "component": true
+}

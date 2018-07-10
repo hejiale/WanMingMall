@@ -1,0 +1,52 @@
+<template name="inputBalance">
+  <wxs module="filter" src="../../../utils/ipcConfig.wxs"></wxs>
+  <view class='memberRightsEditView'>
+    <view class="classViewCover"></view>
+    <view class='memberRightsBgView'>
+      <view class='memberBgTitleView'>
+        <text class='memberBgTitle'>会员权益</text>
+        <text class='memberCancleButton' bindtap='onCoverClicked'>取消</text>
+      </view>
+      <view class='memberRightsBgLine'></view>
+      <view class='offsetAmountView'>
+        <text class='offsetAmountTitle'>可抵扣金额</text>
+        <text class='offsetAmountValue'>￥{{filter.numberToFix(payInfo.inputShouldPrice)}}</text>
+      </view>
+      <view class='offsetAmountInputView'>
+        <input class='offsetAmountInput' placeholder='请输入储值抵扣金额' placeholder-style='color:#999999;font-size: 15px;' bindinput='textFieldInput' type='digit' value='{{payInfo.inputValue}}' cursor-spacing='100'></input>
+      </view>
+      <view class='memberRightsBgBottomLine'></view>
+      <button class='bottomButton' style='{{payInfo.canPayStaus ?"background-color: #3DA8F5;":"background-color: #e6e6e6;"}}' bindtap='{{payInfo.canPayStaus ? "onSure":""}}'>{{payInfo.canPayStaus ? '确定' : '已超抵扣上限'}}</button>
+    </view>
+  </view>
+</template>
+<template name="inputPoint">
+  <wxs module="filter" src="../../../utils/ipcConfig.wxs"></wxs>
+  <view class='memberRightsEditView'>
+    <view class="classViewCover"></view>
+    <view class='memberRightsBgView'>
+      <view class='memberBgTitleView'>
+        <text class='memberBgTitle'>会员权益</text>
+        <text class='memberCancleButton' bindtap='onCoverClicked'>取消</text>
+      </view>
+      <view class='memberRightsBgLine'></view>
+      <view class='offsetAmountView'>
+        <text class='offsetAmountTitle'>可抵扣金额</text>
+        <text class='offsetAmountValue'>￥{{filter.numberToFix(payInfo.inputShouldPrice)}}</text>
+      </view>
+      <view class='offsetUseAmountView'>
+        <text class='offsetUseAmountTitle'>可抵扣积分</text>
+        <text class='offsetUseAmountValue'>{{payInfo.inputPoint}}</text>
+      </view>
+      <view class='offsetUseAmountView'>
+        <text class='offsetUseAmountTitle'>已抵扣金额</text>
+        <text class='offsetUseAmountValue'>-￥{{filter.numberToFix(payInfo.inputPointPrice)}}</text>
+      </view>
+      <view class='offsetAmountInputView'>
+        <input class='offsetAmountInput' placeholder='请输入抵扣积分' placeholder-style='color:#999999;font-size: 15px;' bindinput='textFieldInput' type='number' value='{{payInfo.inputValue}}' cursor-spacing='100'></input>
+      </view>
+      <view class='memberRightsBgBottomLine'></view>
+      <button class='bottomButton' style='{{payInfo.canPayStaus ?"background-color: #3DA8F5;":"background-color: #e6e6e6;"}}' bindtap='{{payInfo.canPayStaus ? "onSure":""}}'>{{payInfo.canPayStaus ? '确定' : '已超抵扣上限'}}</button>
+    </view>
+  </view>
+</template>
